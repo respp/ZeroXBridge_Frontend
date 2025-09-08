@@ -103,7 +103,7 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Name Field */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-[#9E9E9E] mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
               Name
             </label>
             <input
@@ -112,9 +112,9 @@ export default function ContactForm() {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 bg-[#161616] border ${
-                errors.name ? 'border-red-500' : 'border-[#161616]'
-              } rounded-lg text-[#9E9E9E] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
+              className={`w-full px-4 py-3 bg-[#1A1A1A] border ${
+                errors.name ? 'border-red-500' : 'border-[#1A1A1A]'
+              } rounded-[12px] text-white placeholder-[#97A1A4] focus:outline-none transition-colors`}
               placeholder="Enter your name"
             />
             {errors.name && (
@@ -124,7 +124,7 @@ export default function ContactForm() {
 
           {/* Email Field */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-[#9E9E9E] mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
               Email Address
             </label>
             <input
@@ -133,9 +133,9 @@ export default function ContactForm() {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 bg-[#161616] border ${
-                errors.email ? 'border-red-500' : 'border-[#161616]'
-              } rounded-lg text-[#9E9E9E] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
+              className={`w-full px-4 py-3 bg-[#1A1A1A] border ${
+                errors.email ? 'border-red-500' : 'border-[#1A1A1A]'
+              } rounded-[12px] text-white placeholder-[#97A1A4] focus:outline-none transition-colors`}
               placeholder="Enter your email"
             />
             {errors.email && (
@@ -146,7 +146,7 @@ export default function ContactForm() {
 
         {/* Subject Field */}
         <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">
             Subject
           </label>
           <input
@@ -155,9 +155,9 @@ export default function ContactForm() {
             name="subject"
             value={formData.subject}
             onChange={handleInputChange}
-            className={`w-full px-4 py-3 bg-[#161616] border ${
-              errors.subject ? 'border-red-500' : 'border-[#161616]'
-            } rounded-lg text-[#9E9E9E] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
+            className={`w-full px-4 py-3 bg-[#1A1A1A] border ${
+              errors.subject ? 'border-red-500' : 'border-[#1A1A1A]'
+            } rounded-[12px] text-white placeholder-[#97A1A4] focus:outline-none transition-colors`}
             placeholder="Enter subject"
           />
           {errors.subject && (
@@ -167,7 +167,7 @@ export default function ContactForm() {
 
         {/* Message Field */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
             Message
           </label>
           <textarea
@@ -176,9 +176,9 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleInputChange}
             rows={6}
-            className={`w-full px-4 py-3 bg-[#161616] border ${
-              errors.message ? 'border-red-500' : 'border-[#161616]'
-            } rounded-lg text-[#9E9E9E] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-vertical min-h-[120px]`}
+            className={`w-full px-4 py-3 bg-[#1A1A1A] border ${
+              errors.message ? 'border-red-500' : 'border-[#1A1A1A]'
+            } rounded-[12px] text-white placeholder-[#97A1A4] focus:outline-none transition-colors resize-vertical min-h-[120px]`}
             placeholder="Enter your message"
           />
           {errors.message && (
@@ -187,11 +187,11 @@ export default function ContactForm() {
         </div>
 
         {/* Privacy Policy */}
-        <div className="w-[610px] h-[38px] font-normal text-base leading-[120%] tracking-[-0.02em] text-[#9E9E9E] flex-none self-stretch0">
+        <div className="font-normal text-base leading-[120%] tracking-[-0.02em] text-[#97A1A4]">
           We value your privacy. Any information you provide will be used in accordance with our{' '}
           <a 
             href="/privacy-policy" 
-            className="text-[#9E9E9E] hover:text-blue-300 underline transition-colors duration-200"
+            className="text-[#97A1A4] hover:text-white underline transition-colors duration-200"
           >
             Privacy Policy
           </a>
@@ -203,7 +203,7 @@ export default function ContactForm() {
           <button
             onClick={handleSubmit}
             disabled={isSubmitting}
-            className="w-full bg-white text-black font-medium py-3 px-6 rounded-4xl hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-white text-black font-medium py-3 px-6 rounded-[12px] hover:bg-gray-100 focus:outline-none transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
