@@ -38,7 +38,6 @@ const FAQsCard: React.FC<FAQsCardProps> = ({ className = '', onClick }) => {
         ${className}
       `}
       style={{
-        width: '610px',
         height: '481px',
         borderRadius: '16px',
         opacity: 1,

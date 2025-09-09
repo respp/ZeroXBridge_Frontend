@@ -39,7 +39,6 @@ const StatusCard: React.FC<StatusCardProps> = ({ className = '', onClick }) => {
         ${className}
       `}
       style={{
-        width: '610px',
         height: '481px',
         borderRadius: '16px',
         opacity: 1,
