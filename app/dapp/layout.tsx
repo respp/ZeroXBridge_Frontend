@@ -14,13 +14,14 @@ function Layout({
   const pathname = usePathname();
   const comingSoon = pathname === "/dapp/coming-soon";
   const contactPage = pathname === "/dapp/support/contact";
+  const supportPage = pathname === "/dapp/support";
   
   return (
     <>
       <WagmiProvider config={config}>
         <StarknetProvider>
-          {contactPage ? (
-            // Contact page gets no AppLayout (no sidebar)
+          {contactPage || supportPage ? (
+            // Contact and Support pages get no AppLayout (no sidebar)
             children
           ) : (
             // All other pages get the AppLayout with sidebar
