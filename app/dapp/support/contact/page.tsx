@@ -14,22 +14,8 @@ export default function ContactPage() {
       />
 
       {/* Main Content - Contact Form Section */}
-      <main 
-        className="bg-black relative"
-        style={{
-          width: '1440px',
-          maxWidth: '100vw',
-          margin: '0 auto',
-          minHeight: '767px',
-        }}
-      >
-        <div 
-          className="flex flex-col items-start gap-[10px]"
-          style={{
-            padding: '100px',
-            width: '100%',
-          }}
-        >
+      <main className="bg-black relative min-h-[767px] w-full">
+        <div className="flex flex-col items-start gap-[10px] px-5 lg:px-[clamp(16px,5vw,100px)] py-12 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end w-full">
             {/* Contact Form */}
             <div className="w-full" style={{ position: 'relative', zIndex: 10 }}>
